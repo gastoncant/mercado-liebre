@@ -1,0 +1,336 @@
+/* HEADER */
+
+.encabezado{
+    display: flex;
+    height: 17vh;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+header{
+    background-color: var(--color-amarillo);
+}
+header .logo{
+    width: 130px;
+    padding: 25px 20px 15px;
+    flex-grow: .5;
+}
+header p{
+    text-align: center;
+    margin: 25px 10px;
+}
+nav{
+    display: none;
+}
+.barra-busqueda{
+    
+    background-color: white;
+   
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: solid 1px var(--gris-claro);
+    border-radius: 5px;
+    flex-grow: .5;
+   
+    
+}
+.barra-busqueda input{
+    border: none;
+}
+#barra-navegacion{
+    margin-bottom: 10px;
+}
+
+header .burger-menu{
+    color: white;
+    background-color: var(--color-celeste);
+    padding: 10px;
+    width: 15px;
+    border-radius: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+@media screen and (min-width: 361px){
+    
+    nav{
+        display: block;
+    }
+    .burger-menu{
+        display: none;
+    }
+}
+/*desktop*/
+@media (min-width: 769px) {
+    .encabezado{
+        flex-direction: row;
+        justify-content: space-around;
+        height:50px;
+    padding: 15px;
+    margin-bottom: 10px;
+   
+    }
+    .barra-busqueda{
+        position: static;
+        width: 20%;
+
+
+    }
+    .icono-busqueda{
+        position: relative;
+        background-color: white;
+        padding: 5px;
+        display: inline-flex;
+        border:  solid 1px var(--amarillo);
+        border-radius: 5px;
+       
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .barra-navegacion{
+        display: flex;
+        gap: 7%;
+        flex-grow: .3;
+    }
+    .right-list{
+        display: flex;
+        gap: 3%;
+        flex-grow: .2;
+        justify-content: flex-end;
+        margin-right: 15px;
+    }
+}
+
+/* Reglas generales*/
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #03264c;
+}
+li{
+    list-style: none;
+}
+
+
+/* Body */
+body{
+    background-color: var(--color-grisClaro);
+    font-family: var(--font-roboto);
+}
+
+ /* Main */
+main{
+    
+    margin: 0 auto;
+    width: 95%;
+}
+.card{
+    margin: 10px;
+    background-color: white;
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgb(49, 49, 49);
+}
+.card-content{
+    border-top: 1px solid var(--color-grisClaro);
+    padding: 15px;
+    position: relative;
+    
+}
+.card .card-content h6{
+    display: none;
+    
+}
+.card .card-content .icono-camion{
+    border: 1px solid var(--color-verde);
+    border-radius: 50%;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    font-size: 15px;
+    transition: all 1s;
+    background-color: white;
+}
+.card .card-content .icono-camion:hover{
+    transform: rotateZ(-90deg);
+}
+
+.card .card-content .icono-camion i{
+    color: var(--color-verde);
+}
+.card .card-content .product-info{
+    display: flex;
+    align-items: flex-end;
+}
+.card .card-content .product-info p:nth-child(1){
+    flex-grow: .3;
+}
+.card .card-content .product-info p:nth-child(2){
+    flex-grow: .7;
+    color: var(--color-verde);
+    font-size: 14px;
+}
+.card .card-content .product-name{
+    color: var(--color-grisOscuro);
+    font-size: 15px;
+}
+
+/* section */
+.section-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section-title{
+    width: 100%;
+}
+
+    /*Media queries*
+
+/*Tablet*/
+    @media screen and (min-width: 361px){
+    .card .card-content h6{
+        display: block;
+    }
+    .card{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+
+    }
+    nav{
+        display: block;
+    }
+    .burger-menu{
+        display: none;
+    }
+}
+/*Escritorio*/
+    @media (min-width: 768px) {
+    .card{
+        width: 21%;
+    }
+    .logo img{
+        width: 50%;
+        padding: 10px;
+        margin-bottom:15px;
+    }
+}
+
+/* FOOTER */
+footer .icon-footer{
+    font-size:  2em;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    color: var(--color-celeste);
+}
+footer .icon-footer:hover{
+    color: var(--color-grisOscuro);
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+}
+footer h5{
+    color: var(--color-grisOscuro);
+    font-size: 1em;
+}
+footer p{
+    font-size: .8em;
+    margin-left: 60px;
+    margin-right: 60px;
+    color: var(--color-grisOscuro);
+}
+footer .copyright{
+    color: var(--color-grisOscuro);
+    margin-top: 40px;
+    font-size: .8em;
+}
+@media (min-width: 768px) {
+    .footer{
+        display: flex;
+        padding-bottom: 40px;
+        margin: 15px 0;
+    }
+}
+
+/* Formulario */
+
+.seccion1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 15px;
+    margin: 15px;
+}
+.seccion2, .seccion3{
+    margin: 0 auto;
+    width: 455px;
+}
+.input{
+    padding: 3px;
+    border-radius: 3px;
+    height: 30px;
+    margin: 3px;
+    width: 500px;
+    border: none;
+}
+.entradas-especiales{
+    display: block;
+}
+.categorias{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+}
+.boton-enviar{
+    width: 100%;
+    padding: 2%;
+    background-color: var(--color-celeste);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+.boton-enviar:hover{
+    background-color: #0022AA;
+    cursor: pointer;
+}
+
+:root{
+    --color-amarillo : #eac926;
+    --color-azul : #03264c;
+    --color-celeste : #1259c3;
+    --color-grisOscuro : #666;
+    --color-grisClaro : #ebebeb;
+    --color-verde : #39b54a;
+   
+    /* FUENTES */
+    --font-roboto : 'Roboto', sans-serif;
+    
+    /* TAMAÑO DE FUENTE */
+    --paragraph: 12px;
+    --title: 24px;
+    --prices: 18px;
+    --discounts---discounts-descriptions : 16px;
+
+}
